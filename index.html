@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Income & Expense Tracker</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-card">
+        <h1>💰 Expense Tracker</h1>
+
+        <div class="balance-card">
+            <p>Total Balance</p>
+            <h2 id="balance">₹0.00</h2>
+        </div>
+
+        <div class="summary">
+
+            <div class="income-box">
+                <p>Income</p>
+                <h3 id="income">₹0.00</h3>
+            </div>
+
+            <div class="expense-box">
+                <p>Expense</p>
+                <h3 id="expense">₹0.00</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-card">
+
+        <h2>Add Transaction</h2>
+
+        <form id="transactionForm">
+
+            <input
+                type="text"
+                id="description"
+                placeholder="Description"
+                required
+            >
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount"
+                required
+            >
+
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <button type="submit">
+                Add Transaction
+            </button>
+
+        </form>
+    </div>
+
+    <div class="history-card">
+
+        <h2>Transaction History</h2>
+
+        <ul id="transactionList"></ul>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
